@@ -35,14 +35,16 @@ $(document).ready(function() {
     
     $("#container").css({"width": "255px", "background": "#eee", "border": "1px solid #ccc", "border-radius": "5px"});
     
-    $("body").on({
+    
+     $("body").on({
         click: function(event) {
         var toEnter = event.target.value;
-        var result = document.getElementById("result");
+        var resultEntry = $("#result").val();
         if (toEnter != "=") {
-            result.value += toEnter;
+            $("#result").val(resultEntry + toEnter);
         } else if (toEnter == "=") {
-            result.value = eval(result.value);
+            var calc = eval($("#result").val());
+            $("#result").val(calc);
         }
       }
     }, ":button");
