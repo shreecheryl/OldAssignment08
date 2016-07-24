@@ -1,0 +1,33 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 60%;
+    margin: 20px auto;
+    padding: 20px;
+    border: 3px solid #ccc;
+}
+ul {
+	margin: 0;
+	padding: 0;
+}
+li {
+    display: inline-block;
+    margin-right: 10px;
+}
+a {
+    color: #000;
+    text-decoration: none;
+}
+.active {
+    color: blueviolet;
+    font-weight: bold;
+    text-decoration: underline;
+}
+#slides img {
+	display: none;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+

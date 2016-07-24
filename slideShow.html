@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <title>Slide Show</title>
+    <link rel="stylesheet" href="css/slideShow.css">
+	<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    
+    <script type="text/javascript">
+    
+    $(document).ready(function() {
+        // preload images
+        $("#imageList a").each(function() {
+            var swappedImage = new Image();
+            swappedImage.src = $(this).attr("href");
+        })
+        
+        $("#imageList a").click(function(event) {
+        // cancel the default action of the link
+            event.preventDefault();
+            
+        // swap image
+            $("#imageList a").removeClass("active");
+            $(this).addClass("active")
+            var imageURL = $(this).attr("href");
+            $("#slide").fadeOut(1000, function() {
+            $("#slide").attr("src", imageURL).fadeIn(1000);
+            });
+        });
+    });
+        
+    </script>
+</head>
+
+<body>
+<main>
+    <img id="slide" src="images/horse_eye.jpg" alt="">
+    <div id="slides"> 
+        <img src="images/horse_eye.jpg" alt="horse eye" id="img1">
+        <img src="images/cow_face.jpg" alt="cow face" id="img1">
+        <img src="images/piglets.jpg" alt="piglets" id="img1">
+        <img src="images/chicken_eye.jpg" alt="chicken eye" id="img1">
+        <img src="images/dog.jpg" alt="dog" id="img1">
+    </div>
+    <ul id="imageList">
+        <li><a href="images/horse_eye.jpg" class="active">01</a></li>
+        <li><a href="images/cow_face.jpg">02</a></li>
+        <li><a href="images/piglets.jpg">03</a></li>
+        <li><a href="images/chicken_eye.jpg">04</a></li>
+        <li><a href="images/dog.jpg">05</a></li>
+    </ul>
+</main>
+</body>
+</html>
