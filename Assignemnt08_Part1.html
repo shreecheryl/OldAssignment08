@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Assignment 8 Part 1</title>
+  <!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <style type="text/css">
+      #div1, #div2 {
+          border: 1px solid #000;
+          margin: 20px;
+          padding: 20px;
+      }
+      
+      span, form {
+          display: block;
+          margin: 20px;
+      }
+      
+      input, label {
+          display: block;  
+      }
+      
+      input {
+          margin-bottom: 10px;
+      }
+    
+  </style>
+  <script src="js/jquery-3.1.0.min.js"></script>
+  
+  <script>
+      $(document).ready(function() {
+          
+          // STEP 1
+//            $("#btn1").click(function() {
+//                window.alert("The button has been clicked.");
+//            });
+        
+          // STEP 2
+//            $("#btn1").bind("click", function() {
+//                window.alert("The button has been clicked.");
+//            });
+          
+          // STEP 3
+//            $("#btn1").on("click", function() {
+//                window.alert("The button was clicked.");
+//            });
+          
+          // STEP 4
+//            $("#btn1, #btn2").on("click", function() {
+//               window.alert("The button was clicked.");
+//            });
+          
+          // STEP 5
+//            $("#div1").width(400).height(400);
+//            $("#div1").on({
+//                click: function() {
+//                    window.alert("You clicked on Div1.")},
+//                mouseenter: function() {
+//                    window.alert("The mouse is inside of Div1.")},
+//                mouseleave: function() {
+//                    window.alert("The mouse moved outside of Div1.")}
+//            });
+          
+          // STEP 6
+//            $("#div1").width(400).height(400);
+//            $("#div1").on({
+//                click: function() {
+//                $("#div1Msg").text("You clicked on Div1.")},
+//                mouseenter: function() {
+//                $("#div1Msg").text("The mouse is inside of Div1.")},
+//                mouseleave: function() {
+//                $("#div1Msg").text("The mouse moved outside of Div1.")}
+//            });
+          
+          // STEP 7
+//            $("a").click(function(event) {
+//                event.preventDefault();
+//                $(this).css("color", "red");
+//                window.alert($("a").prop("nodeName"));
+//            });
+          
+          // STEP 8
+//            $(window).resize(function() {
+//                $("#div2").text("Browser width: " + $(window).width() + " Browser height: " + $(window).height());
+//            });
+          
+          // STEP 9
+//            $("#input1").focus(function() {
+//                $(this).css("background", "#eee");
+//            });
+//             $("#input1").blur(function() {
+//                $(this).css("background", "#fff");
+//            });
+          
+          // STEP 10
+          
+          $("#submitForm").on("click", function() {
+              var name = $("#name").val();
+              var email = $("#email").val();
+              var isValid = true;
+              
+              if (name == "" && email == "") {
+                  $("form input:text").css("border-color", "red");
+                  window.alert("Both Name and Email are required");
+                  isValid = false
+              } else if (name != "" && email == "") {
+                  $("#email").css("border-color", "red");
+                  window.alert("Both Name and Email are required");
+                  isValid = false
+              } else if (name == "" && email != "") {
+                  $("#name").css("border-color", "red");
+                  window.alert("Both Name and Email are required");
+                  isValid = false
+              } else {
+                  $("form input:text").css("border-color", "green");
+              } 
+            
+           });
+              
+               
+
+          
+
+          
+      
+          
+      });  // End of document ready function
+
+    
+  </script>
+</head>
+
+<body>
+	<button type="button" id="btn1">Click me</button>
+    <button type="button" id="btn2">Click me</button>
+    
+    <div id="div1">For Steps 5 &amp; 6</div>
+    <span id="div1Msg"></span>
+    
+    <a href="http://www.google.com" id="a1">www.google.com</a>
+    
+    <div id="div2">For Step 8 (resize window to display results)</div>
+    
+    <input type="text" id="input1" placeholder="For Step 9">
+    
+    <form>
+        <label for="name">Name</label>
+        <input type="text" id="name">
+        
+        <label for="email">Email</label>
+        <input type="text" id="email">
+        
+        <input type="button" id="submitForm" value="Submit">
+    </form>
+    
+</body>
+</html>
+
+
+
+
+
+
+

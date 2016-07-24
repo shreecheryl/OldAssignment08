@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Lab 2 - Calculator III</title>
+
+<script src="js/jquery-3.1.0.min.js"></script>
+    
+<script type="text/javascript">
+    
+$(document).ready(function() {
+    
+    $("body").css("color", "#33001a");
+    $("input").css({"width": "50px", "font-size": "1em", "margin": "5px", "border-radius": "5px" });
+    $(":text").css({"width": "110px", "border-radius": "5px"});
+    
+    $("#container input:first-child").css({"background": "#ff9999", "border": "2px dotted #ccc"});
+    $("#container input:nth-child(2)").css({"background": "#ff99cc", "border": "2px solid #999"});
+    $("#container input:nth-child(3)").css({"background": "#ff99ff", "border": "2px dotted #888"});
+    $("#container input:nth-child(4)").css({"background": "#cc99ff", "border": "2px solid #777"});
+    $("#container input:nth-child(5)").css({"background": "#9999ff", "border": "2px dotted #666"});
+    $("#container input:nth-child(6)").css({"background": "#99ccff", "border": "2px solid #555"});
+    $("#container input:nth-child(7)").css({"background": "#99ffff", "border": "2px dotted #444"});
+    $("#container input:nth-child(8)").css({"background": "#99ffcc", "border": "1px solid #333"});
+    $("#container input:nth-child(9)").css({"background": "#99ff99", "border": "2px dotted #222"});
+    $("#container input:nth-child(10)").css({"background": "#ccff99", "border": "2px solid #111"});
+    $("#container input:nth-child(11)").css({"background": "#ffff99	", "border": "1px dotted #000"});
+    $("#container input:nth-child(12)").css({"background": "#ffcc99", "border": "2px soldid #eee"});
+    $("#container input:nth-child(13)").css({"background": "#ff99b3", "border": "2px dotted #aaa"});
+    $("#container input:nth-child(14)").css({"background": "#ff99e6", "border": "1px solid #000"});
+    $("#container input:nth-child(15)").css({"background": "#e699ff", "border": "1px dotted #111"});
+    $("#container input:nth-child(16)").css({"background": "#b399ff", "border": "2px solid #222"});
+    $("#container input:nth-child(17)").css({"background": "#99b3ff", "border": "3px dotted #999"});
+    $("#container input:nth-child(18)").css({"background": "#99e6ff", "border": "2px solid #ccc"});
+    
+    $("#container").css({"width": "255px", "background": "#eee", "border": "1px solid #ccc", "border-radius": "5px"});
+    
+    $("body").on({
+        click: function(event) {
+        var toEnter = event.target.value;
+        var result = document.getElementById("result");
+        if (toEnter != "=") {
+            result.value += toEnter;
+        } else if (toEnter == "=") {
+            result.value = eval(result.value);
+        }
+      }
+    }, ":button");
+    
+    $("#result").on("click", function() {
+        this.value = "";
+    });
+    
+}); // End of ready
+    
+</script>
+    
+</head>
+
+<body>
+	<input type="text" readonly id="result">
+    <br>
+    <div id="container">
+        <input type="button" id="seven" value="7">
+        <input type="button" id="eight" value="8">
+        <input type="button" id="nine" value="9">
+        <input type="button" id="divide" value="/">
+        <br>
+        <input type="button" id="four" value="4">
+        <input type="button" id="five" value="5">
+        <input type="button" id="six" value="6">
+        <input type="button" id="multiply" value="*">
+        <br>
+        <input type="button" id="one" value="1">
+        <input type="button" id="two" value="2">
+        <input type="button" id="three" value="3">
+        <input type="button" id="subtract" value="-">
+        <br>
+        <input type="button" id="zero" value="0">
+        <input type="button" id="period" value=".">
+        <input type="button" id="add" value="+">
+    </div>
+        <input type="button" id="equal" value="=">
+</body>
+</html>
