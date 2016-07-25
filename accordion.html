@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <title>Accordion</title>
+    <link rel="stylesheet" href="css/accordion.css">
+	<script src="js/jquery-3.1.0.min.js"></script>
+    
+    <script type="text/javascript">
+    
+    $(document).ready(function() {
+        $("#principles h2").on("click", function() {
+            $(this).toggleClass("minus");
+            $(this).next().slideToggle(700);
+        }); // end of "click"
+    }); // end of ready
+        
+    </script>
+</head>
+
+<body>
+<main id="principles">
+          <h1>Cooperative Principles</h1>
+                    
+          <h2><a href="#">First Principle:<br>Voluntary and Open Membership</a></h2>
+                <div>Cooperatives are voluntary organizations, open to all persons able to use their services and willing to accept the responsibility of membership, without gender, social, racial, political or religious discrimination.</div>
+
+          <h2><a href="#">Second Principle:<br>Democratic Member Control</a></h2>
+                <div>Cooperatives are democratic organizations controlled by their members, who actively participate in setting their policies and making decisions. People serving as elected representatives are accountable to the membership. In primary cooperatives members have equal voting rights (one member, one vote) and cooperatives at other levels are organized in a democratic manner.</div>
+
+          <h2><a href="#">Third Principle:<br>Member Economic Participation</a></h2>
+                <div>Members contribute equitably to, and democratically control, the capital of the cooperative. At least part of that capital is usually the common property of the cooperative. They usually receive limited compensation, if any, on capital subscribed as a condition of membership. Members allocate surpluses for any of all of the following purposes: developing the cooperative, possibly by setting up reserves, part of which at least would be indivisible, benefiting members in proportion to their transactions with the cooperative and supporting other activities approved by the membership.</div>
+    
+          <h2><a href="#">Fourth Principle:<br>Autonomy and Independence</a></h2>
+                <div>Cooperatives are autonomous, self-help organizations controlled by their members. If they enter into agreements with other organizations, including governments, or raise capital from external sources, they do so on terms that ensure democratic control by their members and maintain their cooperative autonomy.</div>
+    
+          <h2><a href="#">Fifth Principle:<br>Education, Training and Information</a></h2>
+                <div>Cooperatives provide education and training for their members, elected representatives, managers, and employees so they can contribute effectively to the development of their cooperatives. They inform the general public—particularly young people—about the nature and benefits of cooperation.</div>
+    
+          <h2><a href="#">Sixth Principle:<br>Cooperation Among Cooperatives</a></h2>
+                <div>Cooperatives serve their members most effectively and strengthen the cooperative movement by working together through local, national, regional, and international structures.</div>
+
+          <h2><a href="#">Seventh Principle:<br>Concern for the Community</a></h2>
+                <div>While focusing on member needs, cooperatives work for the sustainable development of their communities through policies accepted by their members.</div>
+
+</main>
+</body>
+</html>
