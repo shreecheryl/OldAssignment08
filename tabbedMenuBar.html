@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<title>Assignment 8 Tabbed Menu Bar</title>
+    
+<!-- css -->
+
+<link rel="stylesheet" href="css/tabbedMenuBase.css" />
+<link rel="stylesheet" href="css/tabbedMenuStyle.css" />
+    
+<!-- js -->
+<script src="js/jquery-3.1.0.min.js"></script>
+
+<script type="text/javascript">
+    
+    $(document).ready(function(){
+    $("ul#tabs li").click(function(e){
+        if (!$(this).hasClass("active")) {
+            var tabNum = $(this).index();
+            var nthChild = tabNum + 1;
+            $("ul#tabs li.active").removeClass("active");
+            $(this).addClass("active");
+            $("ul#tab li.active").removeClass("active");
+            $("ul#tab li:nth-child("+nthChild+")").addClass("active");
+        }
+    });
+});
+    
+</script>
+    
+</head>
+
+<body>
+
+<div id="wrapper">
+
+<main>
+    
+    <div class="container">
+        <h1>OB People's Food Coop</h1>
+        <ul id="tabs">
+            <li class="active">History</li>
+            <li>Mission</li>
+            <li>Principles</li>
+        </ul>
+        <ul id="tab">
+            <li class="active">
+                <h2>History of the Co-op</h2>
+                <p>Ocean Beach People's Organic Food Co-op was born as a small neighborhood buying club in 1971. The people who nurtured its growth were activists in a local movement to create alternatives to established institutions, including grocery stores. Their dream was a store that provided healthy, non-polluting, cruelty-free foods at a fair price, a store that belongs to the community it serves.</p>
+
+                <p>A year later, we set up our fast-growing enterprise in an apartment storefront at 4859 Voltaire Street. Customers looked for perishable foods in the refrigerator (where else!) and added up their own purchases for the cashier.</p>
+
+                <p>Then in 1973 came a very big step: O.B. People's moved up the street to a former pool and dance hall. It took a lot of work just to get the building ready. Gradually, the new store filled up with products and fixtures. The store's reputation grew too. O.B. People's became known as a truly people-oriented store with a unique selection of foods and uncompromising standards for quality.</p>
+
+                <p>For nearly the first fourteen years, People's had operated as a worker's collective. Then, in 1985, the workers decided that since O.B. People's had always been a community store, it only made sense that it become a food cooperative.</p>
+
+                <p>The years 2001 and 2002 found us remodeling yet again. This time, however, the Co-op moved into a whole new building. We are staying on the same site that we have occupied since 1973, but we have designed and constructed a new sustainable building to meet our growing needs and serve as a model of conscious construction. The new building was completed in the summer 2002 and O.B. People's, our very own community-owned Co-op, has begun a new chapter for a new millennium.</p>
+            </li>
+            <li>
+                <h2>Mission Statement</h2>
+                <p><b>Mission:</b> To operate a retail vegetarian food store providing high quality natural products at a fair and reasonable price.</p>
+
+                <p><b></b>Vision:</b> The Cooperative is dedicated to helping people live in ways that are ecologically sustainable and that promote personal health and well-being.</p>
+
+                <p><b></b>Values:</b> We believe that consumer ownership through a cooperative structure provides consumers with an optimal democratic forum to meet the needs of our community. We are committed to promoting ecological sustainability with the products and services we provide and in the way we operate our business. We promote and emphasize products that are nutritious, organically-grown, cruelty-free and produced in an environmentally sound manner. We believe that informed choices made by all consumers have far reaching impacts on the local and global community, and are committed to providing education and information to enhance nutritional and environmental awareness. We believe that our employees are valuable and essential to the success of our business, and will treat them with respect, compensate them fairly and provide a safe and supportive working environment.</p>
+
+
+            </li>
+            <li>
+                <h2>Business Principles</h2>
+                <p><b>First Principle: Voluntary and Open Membership</b><br>
+                Cooperatives are voluntary organizations, open to all persons able to use their services and willing to accept the responsibility of membership, without gender, social, racial, political, or religious discrimination.</p> 
+
+                <p><b>Second Principle: Democratic Member Control</b><br>
+                Cooperatives are democratic organizations controlled by their members, who actively participate in setting their policies and making decisions. People serving as elected representatives are accountable to the membership. In primary cooperatives members have equal voting rights (one member, one vote) and cooperatives at other levels are organized in a democratic manner.</p> 
+
+                <p><b>Third Principle: Member Economic Participation</b><br>
+                Members contribute equitably to, and democratically control, the capital of the cooperative. At least part of that capital is usually the common property of the cooperative. They usually receive limited compensation, if any, on capital subscribed as a condition of membership. Members allocate surpluses for any of all of the following purposes: developing the cooperative, possibly by setting up reserves, part of which at least would be indivisible, benefiting members in proportion to their transactions with the cooperative, and supporting other activities approved by the membership.</p> 
+
+                <p><b>Fourth Principle: Autonomy and Independence</b><br>
+                Cooperatives are autonomous, self-help organizations controlled by their members. If they enter into agreements with other organizations, including governments, or raise capital from external sources, they do so on terms that ensure democratic control by their members and maintain their cooperative autonomy.</p> 
+
+                <p><b>Fifth Principle: Education, Training, and Information</b><br>
+                Cooperatives provide education and training for their members, elected representatives, managers, and employees so they can contribute effectively to the development of their cooperatives. They inform the general public—particularly young people—about the nature and benefits of cooperation.</p>
+
+                <p><b>Sixth Principle: Cooperation Among Cooperatives</b><br>
+                Cooperatives serve their members most effectively and strengthen the cooperative movement by working together through local, national, regional, and international structures.</p> 
+
+                <p><b>Seventh Principle: Concern for the Community
+                While focusing on member needs, cooperatives work for the sustainable development of their communities through policies accepted by their members.
+            <li>
+        </ul>
+    </div>
+</main>
+
+</div><!-- /#wrapper -->
+
+</body>
+</html>
