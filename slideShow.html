@@ -23,8 +23,8 @@
             $("#imageList a").removeClass("active");
             $(this).addClass("active")
             var imageURL = $(this).attr("href");
-            $("#slide").fadeOut(1000, function() {
-            $("#slide").attr("src", imageURL).fadeIn(1000);
+            $("#slide").fadeOut(700, function() {
+            $("#slide").attr("src", imageURL).fadeIn(700, "swing");
             });
         });
     });
